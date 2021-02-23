@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw2-2</title>
+<style>
+    h1{text-align: center;
+       font-family: Arial, Helvetica, sans-serif;}
+    form{margin-left: auto;
+         margin-right: auto;
+         font-family: Arial, Helvetica, sans-serif;}
+    body{margin: 10px 100px 0 100px;}
+
+</style>
+</head>
+<body>
+     <h1>Customer Feedback</h1>
+     <form method="POST" action="mailto:mliu2@babson.edu"></form>
+        <fieldset>
+            <legend><h3>Your Information:</h3></legend>
+            <br>
+            <label>Name:</label>
+            &emsp;<input type="text"
+                         placeholder="Enter your name here"></input>
+            <pre></pre>
+            <label>Email:</label>
+            &emsp;<input type="text" 
+                         placeholder="Enter your email here"></input>
+        </fieldset>
+
+<br><br>
+        <fieldsey>
+            <ledgend><h3>Your Review:</h3></ledgend>
+            <br>
+            <label for="product-select">What Apple Product did you purchase?</label>
+            <select name="product">
+                <option>Airpods Pro</option>
+                <option>Airpods with Wireless Charging Case</option>
+                <option>Airpods with Charging Case</option>    
+            </select>
+
+            <pre></pre>
+            
+            What do you think of this Product?
+            <br>
+            <input type="radio" value="Great"><label>Great</label></input>
+            <input type="radio" value="Awesome"><label>Awesome</label></input>
+            <input type="radio" value="Good"><label>Good</label></input>
+            
+            <pre></pre>
+            
+            <input checked type="checkbox"></input>
+            <label>Sign mw up for email updates</label>
+
+            <pre></pre>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+        </fieldsey>
+    </form>
+    
+</body>
+</html>
