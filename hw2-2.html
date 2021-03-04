@@ -33,48 +33,59 @@
      <h1>Customer Feedback</h1>
      <form method="POST" action="mailto:mliu2@babson.edu">
         <fieldset>
-            <legend><h3>Your Information:</h3></legend>
-            <br>
-            <label>Name:</label>
-            &emsp;<input type="text"
-                         placeholder="Enter your name here"></input>
-            <pre></pre>
-            <label>Email:</label>
+            <legend>Your Information:</legend>
+          <div>
+			    <label>Name:</label>
+			  &emsp;<input type="text"
+			               placeholder="Enter your name here" />
+		  </div>
+          
+           <div>
+			   <label>Email:</label>
             &emsp;<input type="text" 
-                         placeholder="Enter your email here"></input>
+                         placeholder="Enter your email here" />
+		   </div>
+            
         </fieldset>
 
-<br><br>
+
         <fieldset>
-            <ledgend><h3>Your Review:</h3></ledgend>
-            <br>
-            <label for="product-select">What Apple Product did you purchase?</label>
-            <select name="product">
-                <option>Airpods Pro</option>
-                <option>Airpods with Wireless Charging Case</option>
-                <option>Airpods with Charging Case</option>    
-            </select>
-
-            <pre></pre>
+            <legend>Your Review:</legend>
+            <div>
+				<label for="product-select">What Apple Product did you purchase?</label>
+				<select name="product" id="product-select">
+				    <option>Airpods Pro</option>
+				    <option>Airpods with Wireless Charging Case</option>
+				    <option>Airpods with Charging Case</option>    
+				</select>
+			</div>
             
-            What do you think of this Product?
-            <br>
-            <input type="radio" value="Great"><label>Great</label></input>
-            <input type="radio" value="Awesome"><label>Awesome</label></input>
-            <input type="radio" value="Good"><label>Good</label></input>
 
-            <pre></pre>
+           
             
-            <label for="comments">Comments:</label>
-            <br>
-            <textarea rows="5" cols="60"></textarea>
+           <div>What do you think of this Product?</div> 
+           <div>
+			   <input type="radio" name="think" value="Great" /><label>Great</label>
+			   <input type="radio" name="think" value="Awesome"/><label>Awesome</label>
+			   <input type="radio" name="think" value="Good"/><label>Good</label>
+		   </div>
+            
 
-            <pre></pre>
+            <div> <label for="comments">Comments:</label></div>
+            
+           
+            <div>
+				<textarea rows="5" cols="60" id="comments"></textarea>
+			</div>
+            
+			<div>
+				  <input checked type="checkbox"/>
+				<label>Sign me up for email updates</label>
+			</div>
+            
+          
 
-            <input checked type="checkbox"></input>
-            <label>Sign me up for email updates</label>
-
-            <pre></pre>
+          
 
             <button type="submit">Submit</button>
             <button type="reset">Reset</button>
