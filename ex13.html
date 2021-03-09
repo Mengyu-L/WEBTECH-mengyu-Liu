@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 13</title>
+  </head>
+  <body>
+    <h1>Manipulating Styles and Images</h1>
+    <div>
+      <img src="images/tiger1.jpg" alt="Tiger 1" title="Tiger is walking" width="400" />
+    </div>
+  </body>
+  <script>
+      function enlargeImage(){
+       let tigerImage=document.getElemetById("tiger1")
+       let w = tigerImage.width
+       w = w * 1.5
+       tigerImage width = w
+      }
+      document.getElementById("tiger1").onmouseover =function(){
+          enlargeImage();
+      }
+
+      function reduction(){
+       let tigerImage=document.getElemetById("tiger1")
+       let w = tigerImage.width
+       w = w/1.5
+       tigerImage width = w
+      }
+      document.getElementById("tiger1").onmouseover =function(){
+          reduction();
+      }
+  </script>
+</html>
