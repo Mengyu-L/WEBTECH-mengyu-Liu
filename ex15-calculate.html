@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex15-calculator</title>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+    <form id="calculator" action="">
+      <div>Your Result: <input type="text" name="result" maxlength="30" /></div>
+      <div>
+        Number 1: <input type="text" name="input1" /> Number 2:
+        <input type="text" name="input2" />
+      </div>
+      <div>
+        <button id="add">add</button>
+        <button id="sub">sub</button>
+        <button id="mult">mult</button>
+        <button id="div">div</button>
+      </div>
+    </form>
+    
+    <script>
+      function addition() {
+        console.log("starting...");
+        const myForm = document.getElementById("calculator");
+        const y = myForm["result"].value;
+        const x = myForm["input1"].value;
+        const z = myForm["input2"].value;
+        y.value = parseFloat(x) + parseFloat(z);
+        return false;
+      }
+      function subtraction() {
+        console.log("starting...");
+        const myForm = document.getElementById("calculator");
+        const y = myForm["result"].value;
+        const x = myForm["input1"].value;
+        const z = myForm["input2"].value;
+        y.value = parseFloat(x) - parseFloat(z);
+        return false;
+      }
+      function multiplication() {
+        console.log("starting...");
+        const myForm = document.getElementById("calculator");
+        const y = myForm["result"].value;
+        const x = myForm["input1"].value;
+        const z = myForm["input2"].value;
+        y.value = parseFloat(x) * parseFloat(z);
+        return false;
+      }
+      function division() {
+        console.log("starting...");
+        const myForm = document.getElementById("calculator");
+        const y = myForm["result"].value;
+        const x = myForm["input1"].value;
+        const z = myForm["input2"].value;
+        y.value = parseFloat(x) / parseFloat(z);
+        return false;
+      }
+      document.getElementById("add").onclick = function () {
+        addition();
+      };
+      document.getElementById("sub").onclick = function () {
+        subtraction();
+      };
+      document.getElementById("mult").onclick = function () {
+        multiplication();
+      };
+      document.getElementById("div").onclick = function () {
+        division();
+      };
+    </script>
+  </body>
+</html>
