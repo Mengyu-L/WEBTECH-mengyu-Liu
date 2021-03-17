@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>quiz3-1</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 1.2rem;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        li {
+            margin-top: 5px;
+        }
+
+        .square {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-right: 50px;
+        }
+
+        #blue-square {
+            background-color: blue;
+        }
+
+        #green-square {
+            background-color: green;
+        }
+
+        #red-square {
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz 3 - Question 1</h1>
+    <div>
+        <p>Use internal JavaScript to implement the features below:</p>
+        <ul>
+            <li>
+                When you click any square, <code>h1</code> must change to "<strong>You just clicked blue/green/red square</strong>" (depending on the clicked color).
+            </li>
+            <li>
+                When you click any of the <strong>first two</strong> squares, the
+                color of that clicked square must change to a
+                <strong>darker</strong> color, the other one must change to a
+                <strong>lighter</strong> color.
+            </li>
+            <li>
+                When you click the <strong>red</strong> square, the red square must
+                <strong>disappear</strong> and the other two squares must change to
+                the <strong>original</strong> colors;
+            </li>
+            <li>
+                When you click any of the <strong>first two</strong> squares, the
+                <strong>red</strong> square must <strong>re-appear</strong>.
+            </li>
+            <li>
+                Creating only <strong>one</strong> function for all events will
+                receive <strong>10</strong> bonus points.
+            </li>
+        </ul>
+        <div>
+            <div class="square" id="green-square"></div>
+            <div class="square" id="blue-square"></div>
+            <div class="square" id="red-square"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("green-square").onclick = fun1;
+        document.getElementById("blue-square").onclick = fun2;
+        document.getElementById("red-square").onclick = fun3;
+
+        function fun1() {
+            document.getElementById("red-square").style.display = "block";
+            document.getElementById("green-square").style.backgroundColor = "darkgreen";
+            document.getElementById("blue-square").style.backgroundColor = "lightblue";
+            document.querySelector("h1").innerHTML = "You just clicked green square";
+        }
+
+        function fun2() {
+            document.getElementById("red-square").style.display = "block";
+            document.getElementById("green-square").style.backgroundColor = "lightgreen";
+            document.getElementById("blue-square").style.backgroundColor = "darkblue";
+            document.querySelector("h1").innerHTML = "You just clicked blue square";
+        }
+
+
+        function fun3() {
+            document.getElementById("red-square").style.display = "none";
+            document.getElementById("green-square").style.backgroundColor = "green";
+            document.getElementById("blue-square").style.backgroundColor = "blue";
+            document.querySelector("h1").innerHTML = "You just clicked red square";
+        }
+
+
+
+    </script>
+</body>
+<!-- I finish this in class -->
+</html>
