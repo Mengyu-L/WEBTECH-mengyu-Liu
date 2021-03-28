@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex16-1</title>
+    <style>
+        form {
+            margin: 0 auto;
+            width: 80%;
+            padding: 30px;
+            font-family: Arial;
+            font-weight: bold;
+            background-color: Silver;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Arial;
+        }
+
+        div {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Processing form inputs</h1>
+    <form action="" method="post">
+        <div>
+            <label>
+                Enter your name: <input name="name" id="name" type="text" size="20" />
+            </label>
+            <label id="ageArea">
+                Enter your age :
+                <input name="age" size="4" id="age" type="text" />
+            </label>
+        </div>
+        <div>
+            <label>
+                Select your gender:
+                <select name="gender" id="gender">
+                    <option value="Woman">Female</option>
+                    <option value="Man">Male</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>
+                Your information will appear here: <br />
+                <textarea cols="40" name="result" id="result" rows="4" readonly></textarea>
+            </label>
+        </div>
+         <div>
+          <label>Hide my age.
+            <input name="noAge" onclick="hideAge(this)" type="checkbox" />
+          </label>
+        </div> 
+        <div>
+            <input name="submit" onclick="sub()" type="button" value="Show" />
+            <input name="reset" type="reset" value="Clear" />
+        </div>
+    </form>
+
+    <script>
+        function hideAge(e) {
+            if (e.checked) {
+                document.getElementById("ageArea").style.display = "none";
+            } else {
+                document.getElementById("ageArea").style.display = "inline-block";
+            }
+        }
+
+        function sub() {
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let gender = document.getElementById("gender").value;
+            if (isNaN(age)) {
+                alert("Age must be a number");
+            } else if (name == "") {
+                alert("Name must be filled in");
+            } else {
+                document.getElementById("result").value +="name:"+ name+"\n";
+                document.getElementById("result").value += "age:" + age + "\n"; 
+                document.getElementById("result").value += "gender:" + gender + "\n"; 
+            }
+        }
+
+    </script>
+</body>
+</html>
