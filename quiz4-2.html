@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Quiz 4-2</title>
+  <style>
+      body {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 1.2rem;
+      }
+
+      div {
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+      .center {
+          text-align: center;
+      }
+
+      .red {
+          color: red;
+      }
+
+      form {
+          background-color: lightgray;
+          width: 80%;
+          margin: 10px auto;
+          padding: 10px;
+      }
+
+      form div {
+          margin-top: 10px;
+      }
+  </style>
+</head>
+<body>
+  <h1 class="center">Value of $1000 at 5% (or any input) interest rate in 15 years</h1>
+  <div>
+    <p>
+      Use internal JavaScript to implement the following features:
+    </p>
+    <ul>
+      <li>
+        User will enter one number for "Interest Rate". Clicking the button
+        will start <span class="red">an animation</span> that changes the value of "Year" and "Money"
+        every second.
+      </li>
+      <li>
+        Every <span class="red">second</span> , "Year" should increase by 1 and "Money" should increase
+        based on the interest rate.
+      </li>
+      <li>
+        After year 2036, "Year" should be <span class="red">reset</span> to 2021 and "Money" should be
+        reset to 1000.
+      </li>
+      <li>
+        Please always keep <span class="red">two</span> decimal places.
+      </li>
+      <li>
+        For full points, you need to validate the input properly. (10 points)
+      </li>
+    </ul>
+  </div>
+  <div class="center">
+    <form>
+      <div>
+        <label
+        >Year:
+          <input name="year" readonly size="4" type="text" value="2021"/>
+        </label>
+      </div>
+      <div>
+        <label
+        >Money:
+          <input name="money" readonly size="4" type="text" value="1000"/>
+        </label>
+      </div>
+      <div>
+        <label
+        >Interest Rate: <input name="rate" size="1" type="text"/>%
+        </label>
+      </div>
+      <div>
+        <input type="button" value="Run"/>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
