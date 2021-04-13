@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Quiz 4-2</title>
+  <title>quiz4-2</title>
   <style>
       body {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -69,24 +69,44 @@
       <div>
         <label
         >Year:
-          <input name="year" readonly size="4" type="text" value="2021"/>
+          <input name="year" id="year"  readonly size="4" type="text" value="2021"/>
         </label>
       </div>
       <div>
         <label
         >Money:
-          <input name="money" readonly size="4" type="text" value="1000"/>
+          <input name="money" id="money" readonly size="4" type="text" value="1000"/>
         </label>
       </div>
       <div>
         <label
-        >Interest Rate: <input name="rate" size="1" type="text"/>%
+        >Interest Rate: <input id="rate" name="rate" size="1" type="text"/>%
         </label>
       </div>
       <div>
-        <input type="button" value="Run"/>
+        <input type="button" onclick="computed()"  value="Run"/>
       </div>
     </form>
   </div>
 </body>
+<script>
+	function computed(){ 
+	var year=document.getElementById('year');
+	var money=document.getElementById('money');
+	var rate=document.getElementById('rate');
+	var startyear=year.value;
+	var startmoney=money.value;
+	var startrate=rate.value;
+	if (startyear<2036) {
+		startyear++;
+		year.value=startyear;
+		money.value=((1+startrate/100)*startmoney).toFixed(2);
+		setTimeout(computed,1000)
+	}else{
+		year.value=2021;
+		money.value=1000
+	}
+}
+
+</script>
 </html>
